@@ -1,0 +1,14 @@
+{
+  "name": "chatbot-iskeleti",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ayar dosyasını doldurarak kendi destek chatbotunuzu kurun. Bağımlılık yok.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "kontrol": "node server.mjs --kontrol"
+  },
+  "engines": {
+    "node": ">=18.17"
+  }
+}

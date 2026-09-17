@@ -1,0 +1,10 @@
+<!-- Varsayılan logo. Kendi logonuzu bu klasöre koyup ayarlar.jsonc içindeki
+     "logo" değerini değiştirin: "/assets/logom.png" -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Destek">
+  <rect width="64" height="64" rx="16" fill="currentColor" style="color:#4f46e5" />
+  <path d="M46 29.5c0 7.2-6.3 13-14 13-1.7 0-3.3-.3-4.8-.8L19 44l2.2-6.4A12.6 12.6 0 0 1 18 29.5c0-7.2 6.3-13 14-13s14 5.8 14 13Z"
+        fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round" />
+  <circle cx="26" cy="29.5" r="2" fill="#fff" />
+  <circle cx="32" cy="29.5" r="2" fill="#fff" />
+  <circle cx="38" cy="29.5" r="2" fill="#fff" />
+</svg>

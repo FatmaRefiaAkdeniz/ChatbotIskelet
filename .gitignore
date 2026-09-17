@@ -1,0 +1,6 @@
+# API anahtarları — asla Git'e girmemeli
+.env
+
+node_modules/
+*.log
+.DS_Store

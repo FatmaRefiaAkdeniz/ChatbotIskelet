@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chatbot — deneme sayfası</title>
+    <link rel="icon" href="/assets/logo.svg" />
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        padding: 64px 24px;
+        background: #f5f5fa;
+        color: #1f2033;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+      main { max-width: 620px; margin: 0 auto; }
+      h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: -0.6px; }
+      p { color: #56596e; }
+      code {
+        display: block;
+        margin: 18px 0;
+        padding: 14px 16px;
+        overflow-x: auto;
+        background: #fff;
+        border: 1px solid #e6e4f0;
+        border-radius: 10px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px;
+      }
+      ol { color: #56596e; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Chatbot deneme sayfası</h1>
+      <p>
+        Sağ alttaki butona basıp botunuzu deneyin. Bu sayfa yalnızca denemek içindir;
+        kendi sitenize eklemek için aşağıdaki satırı sayfanızın <code>&lt;/body&gt;</code>
+        etiketinden hemen önce yapıştırmanız yeterli:
+      </p>
+      <code>&lt;script src="http://localhost:3000/embed.js" defer&gt;&lt;/script&gt;</code>
+      <p>Bot beklediğiniz gibi cevap vermiyorsa sırasıyla şunlara bakın:</p>
+      <ol>
+        <li><strong>bilgi-bankasi/</strong> klasöründeki dosyalar — bot yalnızca oradakini bilir.</li>
+        <li><strong>sistem-promptu.md</strong> — üslup ve kurallar.</li>
+        <li><strong>ayarlar.jsonc</strong> — isim, renk, destek kanalları, limitler.</li>
+      </ol>
+      <p>Değişiklikten sonra sunucuyu yeniden başlatın (<code style="display:inline;padding:2px 6px">Ctrl+C</code> → <code style="display:inline;padding:2px 6px">npm start</code>).</p>
+    </main>
+
+    <script src="/embed.js" defer></script>
+  </body>
+</html>

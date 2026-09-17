@@ -1,0 +1,107 @@
+// =============================================================================
+//  CHATBOT AYARLARI
+//  Bu dosyadaki değerleri kendi şirketinize göre değiştirin. "//" ile başlayan
+//  satırlar açıklamadır, silebilirsiniz. Değerleri "tırnak içinde" yazın.
+//  Değişiklikten sonra sunucuyu yeniden başlatın (npm start).
+//
+//  API anahtarı bu dosyaya DEĞİL, .env dosyasına yazılır.
+// =============================================================================
+{
+  // ---------------------------------------------------------------------------
+  // 1) KİMLİK — Bot kim, hangi şirket için çalışıyor?
+  // ---------------------------------------------------------------------------
+
+  // Pencerenin başlığında ve botun kendini tanıtırken kullandığı ad.
+  "botAdi": "Destek Asistanı",
+
+  // Şirketinizin / ürününüzün adı.
+  "sirketAdi": "Örnek Şirket",
+
+  // Şirketinizi bir-iki cümleyle anlatın. Bot kapsamını buradan anlar.
+  // Örnek: "Örnek Şirket, okullar için öğrenci takip yazılımı geliştirir."
+  "sirketTanimi": "Örnek Şirket, müşterilerine çevrim içi hizmetler sunan bir firmadır.",
+
+  // Botun cevap vereceği dil. Örnek: "Türkçe", "English", "Deutsch".
+  "dil": "Türkçe",
+
+  // ---------------------------------------------------------------------------
+  // 2) GÖRÜNÜM — Sohbet penceresi nasıl görünsün?
+  // ---------------------------------------------------------------------------
+
+  "renkler": {
+    "ana": "#4f46e5",     // Başlık, kullanıcı balonu, açma butonu
+    "vurgu": "#f97316"    // Gönder butonu
+  },
+
+  // Logo / bot avatarı. Kendi logonuzu public/assets/ klasörüne koyup adını yazın.
+  // Kare, şeffaf zeminli PNG veya SVG en iyi sonucu verir.
+  "logo": "/assets/logo.svg",
+
+  // Pencerenin sağ altta mı sol altta mı duracağı: "sag" veya "sol"
+  "konum": "sag",
+
+  // Başlığın altındaki küçük durum yazısı. Boş bırakırsanız gizlenir.
+  "durumYazisi": "Çevrim içi · genelde birkaç saniyede yanıt verir",
+
+  // Sohbet açılınca görünen karşılama.
+  "karsilama": {
+    "baslik": "Merhaba 👋",
+    "metin": "Ürünlerimiz, hizmetlerimiz ve teknik sorularınız hakkında yazabilirsiniz."
+  },
+
+  // Karşılamadaki tıklanabilir kartlar. Tıklanınca "baslik" mesaj olarak gönderilir.
+  // İstediğiniz kadar ekleyin ya da hepsini silin: "hizliBaslangic": []
+  "hizliBaslangic": [
+    { "baslik": "Hizmetleri keşfet", "aciklama": "Neler sunduğumuz hakkında genel bilgi" },
+    { "baslik": "Teknik destek", "aciklama": "Bir sorun için yardım alın" },
+    { "baslik": "Fiyatlandırma", "aciklama": "Paketler ve teklif süreci" }
+  ],
+
+  // Her bot cevabının altında çıkan hazır cevap butonları. İstemiyorsanız: []
+  "hizliCevaplar": ["Sorun devam ediyor", "Çözüldü, teşekkürler", "Başka bir konu"],
+
+  "mesajKutusuYazisi": "Mesajınızı yazın...",
+
+  // ---------------------------------------------------------------------------
+  // 3) DAVRANIŞ
+  // ---------------------------------------------------------------------------
+
+  // true: bot yalnızca bilgi-bankasi/ klasöründeki bilgiyle cevap verir, konu dışına çıkmaz.
+  // false: şirket konularında bilgi bankasını önceliklendirir ama genel sorulara da yardım eder.
+  "sadeceBilgiBankasi": true,
+
+  // Kullanıcı görsel, PDF veya .txt ekleyebilsin mi?
+  // (Görsel/PDF okuma yalnızca bunu destekleyen sağlayıcılarda çalışır; bkz. README.)
+  "dosyaEki": true,
+
+  // Modele her istekte gönderilen son mesaj sayısı. Yükseltmek maliyeti artırır.
+  "sohbetGecmisiLimiti": 12,
+
+  // Bir cevabın en fazla uzunluğu (token). 1 token ≈ 3-4 karakter.
+  "maksCevapToken": 1500,
+
+  // 0 = hep aynı, tutarlı cevap · 1 = daha yaratıcı. Destek botu için 0.2-0.4 önerilir.
+  "sicaklik": 0.3,
+
+  // ---------------------------------------------------------------------------
+  // 4) GÜVENLİK VE MALİYET
+  // ---------------------------------------------------------------------------
+
+  // Bir ziyaretçinin dakikada gönderebileceği en fazla mesaj.
+  "dakikadaMesajLimiti": 20,
+
+  // Bir ziyaretçinin saatte gönderebileceği en fazla dosya.
+  "saatteDosyaLimiti": 10,
+
+  // Widget'ın gömülebileceği siteler. Boş liste = her site.
+  // Canlıya çıkarken kendi adresinizi yazın ki başkaları botunuzu (ve faturanızı) kullanamasın.
+  // Örnek: ["https://www.sirketiniz.com", "https://sirketiniz.com"]
+  "izinliSiteler": [],
+
+  // Bilgi bankası bu karakter sayısını aşarsa tamamı yerine her soruda yalnızca en ilgili
+  // bölümler modele gönderilir. 300.000 karakter ≈ 100.000 token.
+  "bilgiBankasiTamSinir": 300000,
+
+  // Yukarıdaki sınır aşıldığında her soruya eklenecek bölüm sayısı.
+  "bilgiBankasiParcaSayisi": 8
+}
